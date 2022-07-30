@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(#200016,#10001f);
+    /* height: 1010px;
+    overflow: hidden; */
+}
+
+nav img{
+display: inline;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active
+{
+    color: #200016;
+    background-color: #fff;
+    border-radius: 70px;
+}
+.navbar .navbar-nav .nav-link{
+    color: #da89f8;
+    letter-spacing: 1.5px;
+    transition: .5s;
+}
+.animation{
+    color: #fff;
+    font-size: 1.25rem;
+    letter-spacing: 2PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dynamic{
+    list-style: none;
+    color: #da89f8;
+    position: relative;
+    padding: 0;
+    margin-left: 10px;
+    margin-bottom: 0;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    font-weight: bold;
+}
+.dynamic::after{
+    position: absolute;
+    content: "";
+    border-left: 3px solid #4d0468 ;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #200016;
+    animation: typing 3s steps(10) infinite;
+}
+.dynamic li{
+    animation: slide 6s steps(2) infinite;
+    position: relative;
+    top: 0;    
+}
+@keyframes slide{
+    100%{
+        top: -60px;
+    }
+}
+@keyframes typing{
+   0%,100%{
+    right: 0;
+    width: 100%;
+   }
+    50%{
+        width: 0; 
+       }
+}
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.main::after{
+    position: absolute;
+    content: "";
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top,#200016,transparent);
+}
+.main img{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+#moon{
+    mix-blend-mode: screen;
+    transform: translateY(80px);
+
+}
+.welcome{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 25px;
+    transform: translateY(-140px);
+}
+.content{
+    color: #fff;
+    padding: 40px;
+}
+.content p{
+    margin: 20px;
+}
+.content h2{
+    font-size: 30px;
+    margin: 20px;
+}
+footer{
+margin-left: 50%;
+transform: translateX(-50%);   
+text-align: center;
+color: #fff;
+width: 100%;
+}
+footer i{
+    margin: 4px;
+    font-size: 20px;
+    color: rgb(77, 129, 241);
+}
+
+
+
